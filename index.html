@@ -33,7 +33,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- LocalBusiness Schema -->
 <script type="application/ld+json">
@@ -116,8 +116,8 @@
   --border:#E2E8F0;          /* hairline borders */
   --success:#16A34A;         /* success / trust green */
   --radius:16px;
-  --font-display:'Syne',sans-serif;
-  --font-body:'Inter',sans-serif;
+  --font-display:'Oswald',sans-serif;
+  --font-body:'Barlow',sans-serif;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font-body);overflow-x:hidden;line-height:1.6}
@@ -156,7 +156,7 @@ nav.scrolled{background:rgba(255,255,255,0.98);box-shadow:0 4px 24px rgba(15,23,
 .mobile-cta{margin-top:16px;background:var(--primary);color:var(--on-primary);padding:14px 24px;border-radius:50px;font-weight:600;text-align:center;display:block;text-decoration:none}
 
 /* HERO */
-#hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;overflow:hidden;background:#08091A}
+#hero{position:relative;height:100vh;height:100svh;min-height:620px;display:flex;align-items:center;overflow:hidden;background:#08091A}
 /* Fallback for mobile / low-power devices where WebGL is skipped entirely for performance.
    transform-only animation (GPU compositor, no layout/paint per frame) keeps this essentially free. */
 #hero.hero-no-3d{background:
@@ -402,7 +402,6 @@ footer{background:var(--surface-alt);border-top:1px solid var(--border);padding:
 /* GALLERY */
 #gallery{background:var(--surface-alt)}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));grid-auto-flow:dense;gap:28px;margin-top:60px}
-box-shadow:0 4px 24px rgba(15,23,42,0.05);transition:transform 0.35s cubic-bezier(0.16,1,0.3,1),box-shadow 0.35s ease;cursor:pointer}
 .gallery-card{
     position:relative;
     overflow:hidden;
@@ -518,7 +517,9 @@ margin:0 auto 60px;
 
 font-family:var(--font-display);
 
-font-size:48px;
+font-size:clamp(28px,5vw,48px);
+
+line-height:1.1;
 
 margin-bottom:16px;
 
@@ -528,7 +529,7 @@ margin-bottom:16px;
 
 color:var(--text-muted);
 
-font-size:18px;
+font-size:clamp(15px,2.2vw,18px);
 
 line-height:1.7;
 
@@ -871,6 +872,101 @@ gap:24px;
 }
 
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COMPREHENSIVE RESPONSIVE REFINEMENTS
+   Layered after the existing breakpoints so they win at equal specificity
+   and tune the base layout for every screen size without rewriting it.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Media can never force horizontal overflow on any device */
+img,video,iframe{max-width:100%;height:auto}
+.map-embed iframe,.gallery-media img,.gallery-media video,.about-img-main img{height:100%}
+
+/* ── ULTRA-WIDE / LARGE DESKTOP (≥1536px) ────────────────────────────────
+   Hold content in a centred, readable column instead of stretching to the
+   edges. max() keeps the usual 5% gutter on normal displays. #hero stays
+   full-bleed on purpose. */
+@media(min-width:1536px){
+  nav,
+  footer,
+  section:not(#hero){
+    padding-left:max(5%,calc((100% - 1360px) / 2));
+    padding-right:max(5%,calc((100% - 1360px) / 2));
+  }
+  .stats-bar,
+  .notice-band,
+  .info-note-card{max-width:1360px;margin-left:auto;margin-right:auto}
+}
+
+/* ── MOBILE NAV a touch earlier so links never crowd on small tablets ──── */
+@media(max-width:860px){
+  .nav-links,.nav-cta{display:none}
+  .nav-mobile-toggle{display:flex}
+}
+
+/* ── SMALL TABLET / LARGE PHONE (≤600px) ─────────────────────────────── */
+@media(max-width:600px){
+  section{padding:60px 5%}
+  .section-subtitle{font-size:15.5px}
+  .reviews-band{padding:44px 5%}
+  .reviews-card{padding:26px 22px}
+  .contact-form{padding:28px 22px}
+  .contact-card{padding:22px;gap:16px}
+  .timing-visual{padding:28px 22px}
+  .package-card{padding:32px 24px}
+  .clock-ring{width:190px;height:190px}
+  .map-embed{height:300px}
+  .about-badge-float{padding:18px 22px}
+  .about-badge-float .num{font-size:34px}
+  .tf-title,.license-card h4,.journey-body h4{font-size:16px}
+}
+
+/* ── PHONES (≤480px) ─────────────────────────────────────────────────── */
+@media(max-width:480px){
+  section{padding:52px 5%}
+  /* Full-width, thumb-friendly primary actions */
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary{width:100%;justify-content:center;padding:15px 24px}
+  .btn-primary,.btn-secondary,.btn-outline{font-size:15px}
+  .package-card{padding:28px 20px}
+  .package-price{font-size:40px}
+  .finder-card{padding:26px 18px}
+  .finder-opt{font-size:13px;padding:10px 16px}
+  .faq-question{padding:20px 18px;font-size:15px}
+  .faq-answer-inner{padding:0 18px 22px}
+  .cc-value{font-size:16px}
+  .reviews-actions{width:100%}
+  .reviews-actions .btn-review{flex:1;justify-content:center}
+  .trust-chip{font-size:12px;padding:8px 14px}
+  .marquee-track{gap:40px}
+  .marquee-track span{font-size:14px}
+  .gallery-lightbox-close{top:16px;right:5%}
+  .stats-bar{padding:20px 16px;gap:14px}
+}
+
+/* ── TINY PHONES (≤380px) ────────────────────────────────────────────── */
+@media(max-width:380px){
+  section{padding:48px 5%}
+  .nav-logo-icon{width:38px;height:38px;font-size:18px}
+  .nav-logo-text{font-size:15px}
+  .section-title{font-size:27px}
+  .stat-number{font-size:24px}
+  .stats-bar{padding:18px 12px;gap:10px}
+  .package-price{font-size:36px}
+  .package-name{font-size:22px}
+  .finder-q-title{font-size:15px}
+  .about-badge-float .num{font-size:30px}
+}
+
+/* ── SHORT / LANDSCAPE VIEWPORTS ─────────────────────────────────────────
+   Phones held sideways: let the hero size to its content and scroll rather
+   than forcing a tall panel that hides the buttons. */
+@media(max-height:600px) and (orientation:landscape){
+  #hero{height:auto;min-height:0;padding:96px 0 56px}
+  .hero-scroll{display:none}
+}
 </style>
 </head>
 <body>
@@ -1068,7 +1164,7 @@ gap:24px;
   <div class="about-grid">
     <div class="about-visual reveal-left">
       <div class="about-img-main">
-        <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=600&q=80&auto=format" alt="Driving instructor with student" loading="lazy">
+        <img src="/Mobile%20Devices/carimage.jpg" alt="Driving instructor with student" loading="lazy">
         <div class="about-img-overlay"></div>
       </div>
       <div class="about-badge-float glow-orange">
@@ -1432,9 +1528,9 @@ Take a look at our learners building confidence behind the wheel during actual d
             </linearGradient>
           </defs>
           <circle cx="110" cy="110" r="70" fill="#F8FAFC"/>
-          <text x="110" y="98" text-anchor="middle" fill="#FF6B00" font-family="'Syne',sans-serif" font-size="16" font-weight="800">5:00 AM</text>
-          <text x="110" y="118" text-anchor="middle" fill="#64748B" font-family="Inter,sans-serif" font-size="11">to</text>
-          <text x="110" y="138" text-anchor="middle" fill="#FF6B00" font-family="'Syne',sans-serif" font-size="16" font-weight="800">11:00 PM</text>
+          <text x="110" y="98" text-anchor="middle" fill="#FF6B00" font-family="'Oswald',sans-serif" font-size="16" font-weight="700">5:00 AM</text>
+          <text x="110" y="118" text-anchor="middle" fill="#64748B" font-family="'Barlow',sans-serif" font-size="11">to</text>
+          <text x="110" y="138" text-anchor="middle" fill="#FF6B00" font-family="'Oswald',sans-serif" font-size="16" font-weight="700">11:00 PM</text>
         </svg>
       </div>
       <div class="timing-info">
@@ -1705,7 +1801,7 @@ Take a look at our learners building confidence behind the wheel during actual d
 </section>
 
 <!-- LOCATION -->
-<section id="location" style="padding:80px 5%">
+<section id="location">
   <div style="text-align:center">
     <div class="section-badge reveal">Find Us</div>
     <h2 class="section-title reveal">We're in Sector 44, Chandigarh</h2>
