@@ -90,11 +90,11 @@
     {"@type": "Question", "name": "Which cars are used for training?", "acceptedAnswer": {"@type": "Answer", "text": "We train on Swift Dzire cars (short and long variants), all fitted with dual controls so your instructor can step in for safety whenever needed."}},
     {"@type": "Question", "name": "Do you teach complete beginners?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Most of our learners start with zero experience. Our instructors are patient and structure every class around your current comfort level."}},
     {"@type": "Question", "name": "Can I choose my own class timings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We're open 5:00 AM to 11:00 PM, seven days a week, so you can pick a slot that fits around work, college or family commitments."}},
-    {"@type": "Question", "name": "Are weekend classes available?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we run classes on weekends and public holidays too — your training schedule doesn't have to wait for the calendar."}},
+    {"@type": "Question", "name": "Are weekend classes available?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we run classes on weekends and public holidays too, so your training schedule doesn't have to wait for the calendar."}},
     {"@type": "Question", "name": "Do you offer automatic car training?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, both our packages include automatic training alongside manual, so you leave comfortable driving either type of car."}},
     {"@type": "Question", "name": "Do you offer manual car training?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, manual training is a core part of every package, including dedicated practice for clutch control, gear shifting and reverse gear."}},
     {"@type": "Question", "name": "What is your refund policy?", "acceptedAnswer": {"@type": "Answer", "text": "Once the course fee is submitted, it is non-refundable under any circumstances, and each course is valid for one individual only. Please review your package details before booking."}},
-    {"@type": "Question", "name": "Is pickup available before class?", "acceptedAnswer": {"@type": "Answer", "text": "Pickup availability can vary by area and slot — give us a call and we'll confirm what's possible for your location."}},
+    {"@type": "Question", "name": "Is pickup available before class?", "acceptedAnswer": {"@type": "Answer", "text": "Pickup availability can vary by area and slot. Give us a call and we'll confirm what's possible for your location."}},
     {"@type": "Question", "name": "How do you prepare me for the license test?", "acceptedAnswer": {"@type": "Answer", "text": "Your final sessions include a dedicated technical class and mock test practice covering the exact manoeuvres examiners look for, backed by our 99% first-test pass rate."}}
   ]
 }
@@ -580,7 +580,7 @@ footer{background:var(--paper);border-top:1px solid rgba(28,27,24,0.14);padding:
 .gallery-lightbox-close{position:absolute;top:24px;right:5%;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.08);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
 @media(max-width:960px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-video{grid-column:span 2}}
 @media(max-width:640px){.gallery-grid{grid-template-columns:1fr;gap:20px}.gallery-video{grid-column:span 1}}
-.notice-band-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.notice-band-icon{font-size:20px;flex-shrink:0;margin-top:2px;color:var(--hazard-amber)}
 .notice-band p{font-size:14px;color:var(--ink-muted);line-height:1.7}
 .notice-band strong{color:var(--ink)}
 
@@ -1038,6 +1038,8 @@ img,video,iframe{max-width:100%;height:auto}
 <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
 <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
 <symbol id="icon-message-circle" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></symbol>
+<symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+<symbol id="icon-square-parking" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></symbol>
 </svg>
 
 <!-- NAV -->
@@ -1057,7 +1059,7 @@ img,video,iframe{max-width:100%;height:auto}
     <li><a href="#faq">FAQs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="tel:07779815838" class="nav-cta"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Book Demo – ₹500</a>
+  <a href="tel:07779815838" class="nav-cta"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Book Demo · ₹500</a>
   <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
     <span></span><span></span><span></span>
   </button>
@@ -1088,7 +1090,7 @@ img,video,iframe{max-width:100%;height:auto}
     <h1 class="hero-title">Drive With<em>Real Confidence</em></h1>
     <p class="hero-subtitle">Step-by-step training with calm, patient instructors. Build solid road skills and pass your test first time on Chandigarh's roads.</p>
     <div class="hero-actions">
-      <a href="tel:07779815838" class="btn-primary"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Book Demo Class – ₹500</a>
+      <a href="tel:07779815838" class="btn-primary"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg> Book Demo Class · ₹500</a>
       <a href="#packages" class="btn-secondary">View Packages <svg class="icon icon-fill" aria-hidden="true"><use href="#icon-arrow-right"/></svg></a>
     </div>
     <div class="hero-trust-mini">
@@ -1217,7 +1219,7 @@ img,video,iframe{max-width:100%;height:auto}
           <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-user-check"/></svg></div>
           <div class="feature-text">
             <h4>Patient, Professional Instructors</h4>
-            <p>Our trainers keep every lesson clear and calm so you build real confidence — not anxiety — behind the wheel.</p>
+            <p>Our trainers keep every lesson clear and calm so you build real confidence, not anxiety, behind the wheel.</p>
           </div>
         </div>
         <div class="feature-item">
@@ -1231,7 +1233,7 @@ img,video,iframe{max-width:100%;height:auto}
           <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-steering-wheel"/></svg></div>
           <div class="feature-text">
             <h4>Modern Training Cars</h4>
-            <p>Swift Dzire (short and long variants) — clean, well-maintained, with dual controls for your safety.</p>
+            <p>Swift Dzire (short and long variants): clean, well-maintained, with dual controls for your safety.</p>
           </div>
         </div>
         <div class="feature-item">
@@ -1272,7 +1274,7 @@ img,video,iframe{max-width:100%;height:auto}
     <div class="license-card reveal reveal-delay-4">
       <div class="license-icon"><svg class="icon" aria-hidden="true"><use href="#icon-shield-check"/></svg></div>
       <h4>Driving Confidence</h4>
-      <p>Beyond passing tests — we make sure you leave able to drive calmly and safely in real traffic, every day.</p>
+      <p>Beyond passing tests, we make sure you leave able to drive calmly and safely in real traffic, every day.</p>
     </div>
   </div>
 </section>
@@ -1282,7 +1284,7 @@ img,video,iframe{max-width:100%;height:auto}
   <div style="text-align:center">
     <div class="section-badge reveal">Your Journey</div>
     <h2 class="section-title reveal">The Route to Your License</h2>
-    <p class="section-subtitle reveal" style="margin:0 auto">Eight stops from your first phone call to driving solo — here's exactly how it goes, sector by sector.</p>
+    <p class="section-subtitle reveal" style="margin:0 auto">Eight stops from your first phone call to driving solo. Here's exactly how it goes, sector by sector.</p>
   </div>
   <div class="route-rail">
     <div class="route-stop reveal-left">
@@ -1297,8 +1299,8 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="route-marker">02</div>
       <div class="route-body">
         <span class="route-eyebrow">Sector 02</span>
-        <h4>Demo Lesson — ₹500</h4>
-        <p>Experience our teaching style firsthand. No pressure — just get a feel for the car and meet your instructor.</p>
+        <h4>Demo Lesson · ₹500</h4>
+        <p>Experience our teaching style firsthand. No pressure, just get a feel for the car and meet your instructor.</p>
       </div>
     </div>
     <div class="route-stop reveal-left">
@@ -1314,7 +1316,7 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="route-body">
         <span class="route-eyebrow">Sector 04</span>
         <h4>Road &amp; Traffic Practice</h4>
-        <p>Daily one-hour sessions on real Chandigarh roads — busy junctions, roundabouts and peak-hour traffic, practised until they stop feeling stressful.</p>
+        <p>Daily one-hour sessions on real Chandigarh roads: busy junctions, roundabouts and peak-hour traffic, practised until they stop feeling stressful.</p>
       </div>
     </div>
     <div class="route-stop reveal-left">
@@ -1346,7 +1348,7 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="route-body">
         <span class="route-eyebrow">Sector 08</span>
         <h4>Drive Independently</h4>
-        <p>Hit the road on your own — calm, capable and ready for everyday traffic, for good.</p>
+        <p>Hit the road on your own: calm, capable and ready for everyday traffic, for good.</p>
       </div>
     </div>
   </div>
@@ -1366,19 +1368,19 @@ img,video,iframe{max-width:100%;height:auto}
   <div class="gallery-grid">
     <figure class="gallery-card gallery-photo reveal" data-gallery-type="photo" data-gallery-index="1">
       <div class="gallery-media">
-        <img src="Mobile%20Devices/IMG-20260715-WA0002.jpg" alt="Expert Driving School — training Student Driving Session" loading="lazy">
+        <img src="Mobile%20Devices/IMG-20260715-WA0002.jpg" alt="Expert Driving School Training: Student Driving Session" loading="lazy">
       </div>
       <figcaption class="gallery-label">Student Driving Session</figcaption>
     </figure>
     <figure class="gallery-card gallery-photo reveal" data-gallery-type="photo" data-gallery-index="2">
       <div class="gallery-media">
-        <img src="Mobile%20Devices/IMG-20260715-WA0003.jpg" alt="Expert Driving School — training Behind the Wheel" loading="lazy">
+        <img src="Mobile%20Devices/IMG-20260715-WA0003.jpg" alt="Expert Driving School Training: Behind the Wheel" loading="lazy">
       </div>
       <figcaption class="gallery-label">Behind the Wheel</figcaption>
     </figure>
     <figure class="gallery-card gallery-photo reveal" data-gallery-type="photo" data-gallery-index="3">
       <div class="gallery-media">
-        <img src="Mobile%20Devices/IMG-20260715-WA0004.jpg" alt="Expert Driving School — training Instructor Guidance" loading="lazy">
+        <img src="Mobile%20Devices/IMG-20260715-WA0004.jpg" alt="Expert Driving School Training: Instructor Guidance" loading="lazy">
       </div>
       <figcaption class="gallery-label">Instructor Guidance</figcaption>
     </figure>
@@ -1423,7 +1425,7 @@ img,video,iframe{max-width:100%;height:auto}
   <div style="text-align:center">
     <div class="section-badge reveal">Not Sure Which Plan?</div>
     <h2 class="section-title reveal">Find Your Perfect Package</h2>
-    <p class="section-subtitle reveal" style="margin:0 auto">Answer 4 quick questions and we'll recommend the right package for you — takes about 15 seconds.</p>
+    <p class="section-subtitle reveal" style="margin:0 auto">Answer 4 quick questions and we'll recommend the right package for you. Takes about 15 seconds.</p>
   </div>
   <div class="finder-card reveal">
     <div class="finder-questions" id="finderQuestions">
@@ -1484,7 +1486,7 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="permit-chip"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg> First-come, first-served car allocation</div>
       <div class="permit-chip"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg> Dual-control cars for your safety</div>
       <div class="permit-chip"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg> Open 5AM–11PM, 7 days a week</div>
-      <div class="permit-chip is-addon"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg> AC Car Add-on Available — ₹1,000/-</div>
+      <div class="permit-chip is-addon"><svg class="icon" aria-hidden="true"><use href="#icon-check-circle"/></svg> AC Car Add-on Available · ₹1,000/-</div>
     </div>
   </div>
   <div class="packages-grid">
@@ -1498,7 +1500,7 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="permit-readout"><span class="permit-currency">₹</span>6,000</div>
       <div class="permit-price-note">One-time fee · Non-refundable</div>
       <ul class="permit-features">
-        <li><strong>150 KM Driving</strong> — total training distance</li>
+        <li><strong>150 KM Driving</strong> · total training distance</li>
         <li>Daily 1-hour sessions</li>
         <li>Manual & automatic training</li>
         <li>Reverse gear practice class</li>
@@ -1521,7 +1523,7 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="permit-readout"><span class="permit-currency">₹</span>8,000</div>
       <div class="permit-price-note">One-time fee · Non-refundable</div>
       <ul class="permit-features">
-        <li><strong>200 KM Driving</strong> — total training distance</li>
+        <li><strong>200 KM Driving</strong> · total training distance</li>
         <li>Daily 1-hour sessions</li>
         <li>Manual & automatic training</li>
         <li>Reverse gear practice class</li>
@@ -1544,7 +1546,7 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="permit-readout"><span class="permit-currency">₹</span>4,000</div>
       <div class="permit-price-note">One-time fee · Non-refundable</div>
       <ul class="permit-features">
-        <li><strong>100 KM Driving</strong> — total training distance</li>
+        <li><strong>100 KM Driving</strong> · total training distance</li>
         <li>Daily 1-hour sessions</li>
         <li>Manual & automatic training</li>
         <li>Reverse gear practice class</li>
@@ -1567,7 +1569,7 @@ img,video,iframe{max-width:100%;height:auto}
       <div class="permit-readout"><span class="permit-currency">₹</span>5,000</div>
       <div class="permit-price-note">One-time fee · Non-refundable</div>
       <ul class="permit-features">
-        <li><strong>120 KM Driving</strong> — total training distance</li>
+        <li><strong>120 KM Driving</strong> · total training distance</li>
         <li>Daily 1-hour sessions</li>
         <li>Manual & automatic training</li>
         <li>Reverse gear practice class</li>
@@ -1583,19 +1585,19 @@ img,video,iframe{max-width:100%;height:auto}
   <div class="info-note-card reveal" style="margin-top:20px">
     <div class="info-note-icon"><svg class="icon" aria-hidden="true"><use href="#icon-car"/></svg></div>
     <div class="info-note-body">
-      <div class="info-note-title">Add-on: AC Car — ₹1,000/-</div>
+      <div class="info-note-title">Add-on: AC Car · ₹1,000/-</div>
       <p>Want to train in an air-conditioned car? Add AC to any package for an extra <strong>₹1,000/-</strong>.</p>
     </div>
   </div>
   <div class="notice-band reveal" style="margin-top:40px">
-    <div class="notice-band-icon">ℹ️</div>
+    <div class="notice-band-icon"><svg class="icon" aria-hidden="true"><use href="#icon-info"/></svg></div>
     <p><strong>Please note:</strong> <strong>Once the course fee is submitted, it is non-refundable under any circumstances.</strong> Each driving course is valid for <strong>one individual only</strong> and cannot be shared with friends, siblings, or others. First day training starts directly in full Chandigarh traffic. Cars are allocated on a <strong>first-come, first-served</strong> basis. The <strong>₹500 demo class fee</strong> is separate from the course package fee. <strong>AC is available as an add-on for ₹1,000/-</strong> on top of any package.</p>
   </div>
   <div class="info-note-card reveal" style="margin-top:20px">
     <div class="info-note-icon"><svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg></div>
     <div class="info-note-body">
       <div class="info-note-title">Good to Know</div>
-      <p>Every driving class is a focused <strong>1-hour session</strong>. Your very first class begins directly in real Chandigarh traffic — always under the calm, close supervision of your instructor.</p>
+      <p>Every driving class is a focused <strong>1-hour session</strong>. Your very first class begins directly in real Chandigarh traffic, always under the calm, close supervision of your instructor.</p>
     </div>
   </div>
 </section>
@@ -1605,7 +1607,7 @@ img,video,iframe{max-width:100%;height:auto}
   <div style="text-align:center">
     <div class="section-badge reveal">Driving Classes</div>
     <h2 class="section-title reveal">Open When You Need Us</h2>
-    <p class="section-subtitle reveal" style="margin:0 auto">Early morning, late evening or any time in between — we fit your schedule, not the other way around.</p>
+    <p class="section-subtitle reveal" style="margin:0 auto">Early morning, late evening or any time in between. We fit your schedule, not the other way around.</p>
   </div>
   <div class="timings-inner">
     <div class="timing-visual reveal-left glow-orange">
@@ -1638,7 +1640,7 @@ img,video,iframe{max-width:100%;height:auto}
       </div>
       <div class="timing-note">
         <span><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg></span>
-        <span>All lesson slots — weekdays, weekends and holidays — are available on a flexible basis. Pick what suits you each week.</span>
+        <span>All lesson slots, weekdays, weekends and holidays, are available on a flexible basis. Pick what suits you each week.</span>
       </div>
     </div>
     <div class="timing-features reveal-right">
@@ -1646,7 +1648,7 @@ img,video,iframe{max-width:100%;height:auto}
         <div class="tf-icon"><svg class="icon" aria-hidden="true"><use href="#icon-sunrise"/></svg></div>
         <div>
           <div class="tf-title">Early Risers Welcome</div>
-          <div class="tf-desc">First slots available at 5:00 AM — perfect if you want to train before work or in light traffic hours.</div>
+          <div class="tf-desc">First slots available at 5:00 AM, perfect if you want to train before work or in light traffic hours.</div>
         </div>
       </div>
       <div class="timing-feature">
@@ -1660,7 +1662,7 @@ img,video,iframe{max-width:100%;height:auto}
         <div class="tf-icon"><svg class="icon" aria-hidden="true"><use href="#icon-moon"/></svg></div>
         <div>
           <div class="tf-title">Evening Training Available</div>
-          <div class="tf-desc">Last slots at 11:00 PM — ideal for those who work full-time and want to learn in the evenings.</div>
+          <div class="tf-desc">Last slots at 11:00 PM, ideal for those who work full-time and want to learn in the evenings.</div>
         </div>
       </div>
       <div class="timing-feature">
@@ -1783,7 +1785,7 @@ img,video,iframe{max-width:100%;height:auto}
     </div>
     <div class="faq-item reveal">
       <button class="faq-question" aria-expanded="false">Are weekend classes available?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">Yes, we run classes on weekends and public holidays too — your training schedule doesn't have to wait for the calendar.</div></div>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes, we run classes on weekends and public holidays too, so your training schedule doesn't have to wait for the calendar.</div></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-question" aria-expanded="false">Do you offer automatic car training?<span class="faq-icon">+</span></button>
@@ -1799,7 +1801,7 @@ img,video,iframe{max-width:100%;height:auto}
     </div>
     <div class="faq-item reveal">
       <button class="faq-question" aria-expanded="false">Is pickup available before class?<span class="faq-icon">+</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">Pickup availability can vary by area and slot — give us a call and we'll confirm what's possible for your location.</div></div>
+      <div class="faq-answer"><div class="faq-answer-inner">Pickup availability can vary by area and slot. Give us a call and we'll confirm what's possible for your location.</div></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-question" aria-expanded="false">How do you prepare me for the license test?<span class="faq-icon">+</span></button>
@@ -1813,7 +1815,7 @@ img,video,iframe{max-width:100%;height:auto}
   <div style="text-align:center">
     <div class="section-badge reveal">Get In Touch</div>
     <h2 class="section-title reveal">Ready to Start Driving?</h2>
-    <p class="section-subtitle reveal" style="margin:0 auto">Call us directly or fill the form — we'll get back to you within the hour to book your demo class for ₹500.</p>
+    <p class="section-subtitle reveal" style="margin:0 auto">Call us directly or fill the form. We'll get back to you within the hour to book your demo class for ₹500.</p>
   </div>
   <div class="contact-grid">
     <div class="contact-info reveal-left">
@@ -1846,7 +1848,7 @@ img,video,iframe{max-width:100%;height:auto}
         <div>
           <div class="cc-label">School Address</div>
           <div class="cc-value" style="font-size:15px">1487, Sector-45-B</div>
-          <div class="cc-sub">Sector 44, Chandigarh — 160047</div>
+          <div class="cc-sub">Sector 44, Chandigarh, 160047</div>
         </div>
       </div>
     </div>
@@ -1871,11 +1873,11 @@ img,video,iframe{max-width:100%;height:auto}
           <label for="fsubject">Interested In</label>
           <select id="fsubject">
             <option value="">Select a package…</option>
-            <option>Package 1 — ₹6,000 (150 KM Driving)</option>
-            <option>Package 2 — ₹8,000 (200 KM Driving)</option>
-            <option>Package 3 — ₹4,000 (100 KM Driving)</option>
-            <option>Package 4 — ₹5,000 (120 KM Driving)</option>
-            <option>Demo Class — ₹500</option>
+            <option>Package 1 · ₹6,000 (150 KM Driving)</option>
+            <option>Package 2 · ₹8,000 (200 KM Driving)</option>
+            <option>Package 3 · ₹4,000 (100 KM Driving)</option>
+            <option>Package 4 · ₹5,000 (120 KM Driving)</option>
+            <option>Demo Class · ₹500</option>
             <option>General Enquiry</option>
           </select>
         </div>
@@ -1917,7 +1919,7 @@ img,video,iframe{max-width:100%;height:auto}
         </div>
       </div>
       <div class="loc-item">
-        <div class="loc-icon">⏰</div>
+        <div class="loc-icon"><svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg></div>
         <div>
           <div class="loc-label">Operating Hours</div>
           <div class="loc-value">5:00 AM – 11:00 PM<br>7 Days a Week, All Year</div>
@@ -1945,7 +1947,7 @@ img,video,iframe{max-width:100%;height:auto}
         </div>
       </div>
       <div class="loc-item">
-        <div class="loc-icon">🅿️</div>
+        <div class="loc-icon"><svg class="icon" aria-hidden="true"><use href="#icon-square-parking"/></svg></div>
         <div>
           <div class="loc-label">Parking</div>
           <div class="loc-value">[Parking information placeholder]</div>
