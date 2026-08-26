@@ -437,6 +437,11 @@ section{padding:100px 5%}
 #contact .section-title{font-family:var(--font-signage);color:var(--ink)}
 #contact .section-subtitle{color:var(--ink-muted)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:60px}
+/* The <select> in the contact form has intrinsic min-content width from its
+   longest option text ("Package 2 · ₹8,000 (200 KM Driving)"). Without
+   min-width:0, that pushes the collapsed single-column grid track wider than
+   the section on narrow phones, overflowing the viewport. */
+.contact-grid>*{min-width:0}
 .contact-info{display:flex;flex-direction:column;gap:24px}
 .contact-card{background:var(--permit-stock);border:1px solid rgba(28,27,24,0.14);border-radius:12px;padding:28px;display:flex;gap:20px;align-items:flex-start;transition:all 0.3s}
 .contact-card:hover{border-color:rgba(30,91,61,0.3);transform:translateX(6px);box-shadow:0 12px 28px rgba(15,23,42,0.08)}
@@ -934,8 +939,13 @@ img,video,iframe{max-width:100%;height:auto}
   .info-note-card{max-width:1360px;margin-left:auto;margin-right:auto}
 }
 
-/* ── MOBILE NAV a touch earlier so links never crowd on small tablets ──── */
-@media(max-width:860px){
+/* ── MOBILE NAV — switches before the link row runs out of space ────────
+   The full link row ("Find My Plan", "How It Works" etc.) needs ~1070px to
+   stay on one line; below that the flex items were squeezed and each
+   multi-word link wrapped onto 2-3 lines, blowing out the fixed 70px nav
+   height. Switching to the hamburger menu earlier (1100px) keeps the bar
+   single-line at every width above it. */
+@media(max-width:1100px){
   .nav-links,.nav-cta{display:none}
   .nav-mobile-toggle{display:flex}
 }
